@@ -12,7 +12,8 @@
     "sequelize": "6.27.0",
     "typescript": "4.9.4",
     "body-parser": "^1.18.3",
-    "mysql2":"^2.3.3"
+    "mysql2": "^2.3.3",
+    "joi": "^17.7.0"
   },
   "author": "Tushar Narula",
   "license": "ISC",

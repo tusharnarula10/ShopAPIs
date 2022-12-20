@@ -1,9 +1,11 @@
 import express from 'express';
 const orderRouter = express.Router();
 import { Order } from '../controllers/order';
+import { checkout } from "../../Middlewares/validations";
+import validate from "../../Middlewares/validationMiddleware";
+const order = new Order();
 
-const order = new Order()
-orderRouter.post('/checkout', async (req, res) => {
+orderRouter.post('/checkout', validate(checkout), async (req, res) => {
     try {
         const response = await order.createOrder(req.body);
         res.send(response);
