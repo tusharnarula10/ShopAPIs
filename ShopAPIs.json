@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "ede965e8-ab69-4c82-8d16-4800ae619f61",
+		"name": "Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"Tushar\",\r\n    \"order\":[{\r\n        \"id\":\"1\",\r\n        \"quantity\":\"4\"\r\n    },{\r\n        \"id\":2,\r\n        \"quantity\":1\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/order/checkout"
+			},
+			"response": []
+		},
+		{
+			"name": "getProductList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product/getProductList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"getProductList"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "price",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "asc",
+							"disabled": true
+						},
+						{
+							"key": "search",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
